@@ -17,7 +17,7 @@ import {
   import { Redirect, Route } from 'react-router';
   import Home from './Home';
   import About from './About';
-  } from '@ionic/react';
+  
   
   const Menu: React.FC = () => {
     const path = [
