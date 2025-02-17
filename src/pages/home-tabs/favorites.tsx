@@ -2,11 +2,18 @@ import {
     IonButtons,
       IonContent, 
       IonHeader, 
+      IonIcon, 
+      IonLabel, 
       IonMenuButton, 
       IonPage, 
+      IonRouterOutlet, 
+      IonTabBar, 
+      IonTabButton, 
+      IonTabs, 
       IonTitle, 
       IonToolbar 
   } from '@ionic/react';
+  
   
   const favorites: React.FC = () => {
     return (
@@ -20,6 +27,16 @@ import {
           </IonToolbar>
         </IonHeader>
         <IonContent fullscreen>
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: '100%',
+          }}
+        >
+          Favorites
+        </div>
         </IonContent>
       </IonPage>
     );
