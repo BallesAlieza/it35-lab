@@ -7,6 +7,7 @@ import {
     IonPage, 
     IonTitle, 
     IonToolbar, 
+    IonInput, IonItem, IonList, IonInputPasswordToggle,
     useIonRouter
 } from '@ionic/react';
 
@@ -22,6 +23,26 @@ const Login: React.FC = () => {
           <IonTitle>Login</IonTitle>
         </IonToolbar>
       </IonHeader>
+      <IonItem>
+
+ 
+
+<IonInput label="Email" type="email" placeholder=""></IonInput>
+
+
+</IonItem>
+
+
+
+
+
+<IonItem>
+
+
+<IonInput label="Password" type="password" value=""></IonInput>
+
+
+</IonItem>
       <IonContent className='ion-padding'>
           <IonButton onClick={() => doLogin()} expand="full">
               Login
