@@ -7,14 +7,23 @@ import {
     IonPage, 
     IonTitle, 
     IonToolbar, 
-    useIonRouter
+    useIonRouter,
 } from '@ionic/react';
+import { logoIonic } from 'ionicons/icons';
 
 const Login: React.FC = () => {
   const navigation = useIonRouter();
   const doLogin = () => {
       navigation.push('/it35-lab/app','forward','replace');
-  }
+  };
+  const goToRegister = () => {
+
+ 
+
+    navigation.push('/register'); //  Navigate to Register
+
+
+  };
   return (
     <IonPage>
       <IonHeader>
@@ -25,7 +34,13 @@ const Login: React.FC = () => {
       <IonContent className='ion-padding'>
           <IonButton onClick={() => doLogin()} expand="full">
               Login
-          </IonButton>
+          </IonButton >
+          <IonButton onClick={() => goToRegister()} expand="full">
+
+ 
+Sign up
+
+</IonButton>
       </IonContent>
     </IonPage>
   );
