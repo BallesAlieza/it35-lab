@@ -80,7 +80,7 @@ const Login: React.FC = () => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-          }}>USER LOGIN</h1>
+          }}>LOGIN KA?</h1>
           <IonInput
             label="Email" 
             labelPlacement="floating" 
