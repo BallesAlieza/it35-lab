@@ -46,11 +46,33 @@ const FeedContainer = () => {
   }, []);
 
   const createPost = async () => {
-    if (!postContent || !user || !username) return;
-    const { data, error } = await supabase.from('posts').insert([{ post_content: postContent, user_id: user.id, username }]).select('*');
-    if (!error && data) setPosts([data[0] as Post, ...posts]);
-    setPostContent('');
+    console.log("Creating post...");
+    console.log("Post Content:", postContent);
+    console.log("User:", user);
+    console.log("Username:", username);
+  
+    if (!postContent || !user || !username) {
+      console.warn("Missing input! Cannot create post.");
+      return;
+    }
+  
+    const { data, error } = await supabase
+      .from('posts')
+      .insert([{ post_content: postContent, user_id: user.id, username }])
+      .select('*');
+  
+    if (error) {
+      console.error("Supabase insert error:", error);
+      return;
+    }
+  
+    if (data) {
+      console.log("Post successfully created:", data[0]);
+      setPosts([data[0] as Post, ...posts]);
+      setPostContent('');
+    }
   };
+  
 
   const deletePost = async (post_id: string) => {
     await supabase.from('posts').delete().match({ post_id });
