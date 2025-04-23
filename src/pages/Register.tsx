@@ -15,7 +15,6 @@ import {
     IonCardTitle,
     IonAlert,
 } from '@ionic/react';
-
 import { supabase } from '../utils/supabaseClient';
 import bcrypt from 'bcryptjs';
 
